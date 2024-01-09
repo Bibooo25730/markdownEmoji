@@ -1,0 +1,7 @@
+.apding::after{
+    display: inline-block;
+    content: ".";
+    color: #fff;
+    margin: 0 1.85rem;
+    vertical-align: text-bottom;
+}

@@ -1,0 +1,5 @@
+{  
+  "/": "pages/index.js",  
+  "/about": "pages/about.js",
+  "/PlayCom":"pages/PlayCom.js"  
+}

@@ -1,0 +1,9 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+    <ShortName>mdmoji</ShortName>
+    <Description>为你的markdown笔记添加更加丰富的表情吧.</Description>
+    <Tags>mdmoji emoji git</Tags>
+    <Image height="16" width="16" type="image/png">xxx</Image>
+    <Image height="32" width="32" type="image/png">xxx</Image>
+    <Image height="96" width="96" type="image/png">xxx</Image>
+    <Url type="text/html" template="https://gitmoji.dev/?search={searchTerms}"/>
+</OpenSearchDescription>
