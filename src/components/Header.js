@@ -64,7 +64,7 @@ export default function Header(){
                 <Image src="../images/Logo.svg"   alt="SVG Image"  width={510} height={300}/>
                 <p className="font-zpix text-4xl py-10">为你的markdown笔记添加更加丰富的表情吧</p>
                 <div>
-                    <Link className={styles.button} href="https://github.com/">
+                    <Link className={styles.button} href="https://github.com/Bibooo25730">
                         GitHub
                     </Link>
                     <Link className={styles.button} href="https://www.bibooo.cn/">

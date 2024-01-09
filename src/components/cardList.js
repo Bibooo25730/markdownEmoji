@@ -1,6 +1,7 @@
 import styles from "./cardList.module.css"
-import emoji from "@/module/module";
-import Dialog from "@/components/Dialog/Dialog";
+import emoji from "@/src/module/module";
+import Dialog from "./Dialog/Dialog";
+
 import {useState,useEffect} from "react";
 
 export default function CardList({OptionData,SearchData}){

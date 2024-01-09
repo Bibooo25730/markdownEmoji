@@ -2,7 +2,7 @@
     list-style: none;
     flex-direction: row;
     align-items: center;
-  
+ 
     width: 100%;
     display: none;
     transition: 1s all ease;
@@ -80,7 +80,7 @@
 
 .progressContainer{
     position: absolute;
-    bottom: 8%;
+     top: 85%;
     width: 98%;
     left: 1%;
     height: 8px;
