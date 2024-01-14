@@ -82,7 +82,7 @@ export default function CardList({OptionData,SearchData}){
                 }):emoji.map((item,index)=>{
                 return (
                     <article key={index}  className="flex px-6 pt-3 w-1/3  py-6  max-md:flex-col max-lg:w-1/3 max-md:w-1/2 max-sm:w-full" >
-                        <div className={ styles.codeOne }>
+                        <div  onClick={()=>handleClick(item)}  className={ styles.codeOne }>
                             <header className=" bg-footerColor flex justify-center items-center" style={{borderTopLeftRadius:'4px',borderTopRightRadius:'4px'}}>
                                 <button type="button" className={styles.emoji_clipboard_emoji}
                                         data-clipboard-text={item.alt}>{item.alt}
@@ -96,6 +96,10 @@ export default function CardList({OptionData,SearchData}){
                                 <p  className={styles.codeP}>{item.shortcode}</p>
                             </div>
                         </div>
+
+                        {notifications.map(notification => (
+                                show?<Dialog showBtn={handleRemove}  key={notification.id}   short={notification.message?notification.message:'为空'}  />:''
+                            ))}
                     </article>
 
 
