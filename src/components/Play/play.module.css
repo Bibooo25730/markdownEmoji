@@ -1,0 +1,170 @@
+.ul{
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+ 
+    width: 100%;
+    display: none;
+    transition: 1s all ease;
+}
+.ul li{
+    padding-left: 1%;
+}
+.ul li:first-child{
+    position: absolute;
+    top: -80px;
+    right: 0;
+
+}
+.video:-webkit-full-screen,
+.video:-moz-full-screen,
+.video:-ms-fullscreen,
+.video:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+}
+.video{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+.video:focus{
+    outline: none;
+}
+
+/*.video:hover .progress{*/
+/*    opacity: 0;*/
+/*}*/
+.figule{
+   position: relative;
+}
+.figule:hover .ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+.figule:hover .progressContainer{
+    position: absolute;
+    bottom: 10%;
+    width: 98%;
+    left: 1%;
+    height: 8px;
+    background-color: hsla(0,0%,100%,.2);
+    opacity: 1;
+}
+.iframe{
+    position: absolute; top:0; left: 0; width: 100%; height: 100%;
+}
+.video_container{
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 100%;
+    overflow: hidden;
+}
+.progress{
+    width: 0;
+    height: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    background-color: #1890ff;
+    outline: none;
+    transition: 1s all ease;
+}
+
+.progressContainer{
+    position: absolute;
+     top: 85%;
+    width: 98%;
+    left: 1%;
+    height: 8px;
+    background-color: hsla(0,0%,100%,.2);
+    opacity: 0;
+    transition: 1s all ease;
+    cursor: pointer;
+    z-index: 999;
+}
+.progressContainer:hover .progress{
+    height: 12px;
+}
+
+.i{
+    display: block;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width:2px;
+    cursor: pointer;
+    height: 100%;
+    background-color:darkred;
+}
+
+/*.progressContainer:hover::after{*/
+/*    */
+/*}*/
+/* Webkit-based browsers */
+.input[type="range"]::-webkit-slider-thumb {
+
+    -webkit-appearance: none;
+    background-color: #fff;
+    width: 50px;
+    height: 3px;
+}
+
+/* Firefox */
+/* .input[type="range"]::-moz-range-thumb {
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 9px;
+} */
+
+
+/* Firefox */
+.input[type="range"]::-moz-range-thumb {
+
+    background-color: #fff;
+}
+.input[type="range"] {
+
+    height: 3px;
+    width: 80px;
+}
+
+
+/* Firefox */
+.input[type="range"]::-moz-range-track {
+    background-color: #fff;
+}
+.mute{
+    display: flex;
+    /*width: 50%;*/
+}
+.mutes{
+   visibility: hidden;
+    display: flex;
+    padding-left: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.mute:hover  .mutes {
+    /* 添加样式 */
+    visibility:visible;
+}
+
+@media (max-width: 524px) {  
+    .progressContainer{
+        top: 85%
+    }
+}
+@media (max-width: 375px) {  
+    .progressContainer{
+        top:70%
+    }
+}
