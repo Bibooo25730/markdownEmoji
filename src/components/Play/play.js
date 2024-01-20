@@ -1,8 +1,6 @@
 import React, { useRef,useState,useEffect } from 'react';
 import fscreen from 'fscreen';
 import play from "./play.module.css";
-import Particles from "react-particles";
-import {Play} from "next/dist/compiled/@next/font/dist/google";
 import { throttle } from 'lodash';
 import {event} from "next/dist/build/output/log";
 
