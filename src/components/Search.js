@@ -53,7 +53,7 @@ const SearchBox = ({ setOptionData ,setSearchData}) => {
         <form  className={styles.searchBox} onSubmit={handleSubmit}>
             <input
                 ref={myRef}
-                style={ClickBean ? { background: '#fff' } : { background: '#2b2b2b' }}
+               style={ClickBean ? { background: '#fff',overflow:'hidden' } : { background: '#2b2b2b',overflow:'hidden' }}
                 type="text"
                 placeholder="输入搜索关键字中文"
                 value={searchTerm}
