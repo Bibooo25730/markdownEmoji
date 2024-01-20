@@ -22,7 +22,7 @@ export default function CardList({OptionData,SearchData}){
                     /* clipboard successfully set */
                     const newNotification = {
                         id: Date.now(),
-                        message: item.alt
+                        message: item
                     };
                     setNotifications([...notifications, newNotification]);
                     // setShow(true)      
