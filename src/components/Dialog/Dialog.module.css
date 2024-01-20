@@ -11,9 +11,6 @@
     background-color: #f1f1f1;
     padding: 20px;
 }
-.position_right:hover{
-
-}
 .p{
     font-size: 19px;
 
@@ -25,4 +22,9 @@
 .container{
    display: flex;
 
+}
+.position_left{
+     position: absolute;
+     right:20px;
+     top: 18px;
 }
