@@ -3,6 +3,7 @@ import emoji from "@/src/module/module";
 import Dialog from "./Dialog/Dialog";
 
 import {useState,useEffect} from "react";
+import { error } from "next/dist/build/output/log";
 
 export default function CardList({OptionData,SearchData}){
     let viBean = OptionData
@@ -12,27 +13,33 @@ export default function CardList({OptionData,SearchData}){
     }))
 
 
-    console.log("emoji",emojiSearch)
+    
     const [notifications, setNotifications] = useState([]);
     function handleClick(item){
-        setShow(true)
-        navigator.clipboard.writeText(item.alt).then(
-            function (alt) {
-                /* clipboard successfully set */
-                const newNotification = {
-                    id: Date.now(),
-                    message: item
-                };
-                setNotifications([...notifications, newNotification]);
-            },
-            function (err) {
-                /* clipboard write failed */
-                let item = {
-                    alt:"暂无表情",
-                    shortcode:'看看其他的吧！！！'
-                }
-            },
-        );
+        if(navigator.clipboard){
+            navigator.clipboard.writeText(item.alt).then(
+                function (alt) {
+                    /* clipboard successfully set */
+                    const newNotification = {
+                        id: Date.now(),
+                        message: item.alt
+                    };
+                    setNotifications([...notifications, newNotification]);
+                    // setShow(true)      
+                },
+            ).catch(error=>{
+                console.error('Error in copying text',error)
+                // setShow(false)      
+            });
+            
+        }else{
+            const item = {
+                id: Date.now(),
+                message:'浏览器不支持Clipboard API'
+            }
+            setNotifications([...notifications,  item]);
+        }
+
     }
     useEffect(() => {
         if (notifications.length > 0) {
