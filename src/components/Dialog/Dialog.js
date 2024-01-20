@@ -4,6 +4,7 @@ export default function Dialog(props){
 
      let {showBtn,short} = props;
     console.log(short)
+ 
      function  handleRemove(){
 
            showBtn(false)
@@ -11,11 +12,13 @@ export default function Dialog(props){
     return(
         <div className={styles.position_right}>
             <div  className={styles.container}>
-                <div className={styles.p}>
-                    <p>已为你复制了{short.alt}  </p>
-                    <p>{short.shortcode} </p>
-                    <p>快给你的笔记添加更多表情吧！</p>
-                </div>
+            {short.alt? <div className={styles.p}>
+            
+            <p>已为你复制了{short.alt}  </p>
+            <p>{short.shortcode} </p>
+            <p>快给你的笔记添加更多表情吧！</p>
+        </div>:<p>{short}</p>}
+          
                 <div onClick={handleRemove} className={styles.position_left}>
                     x
                 </div>
